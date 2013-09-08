@@ -17,13 +17,13 @@ func p1easy(n int) int {
 	return sum
 }
 
-func SumDivisibleBy(target, n int) int {
-	p := target / n
-	return n * (p * (p + 1)) / 2
-}
-
 func p1fast(target int) int {
-	return SumDivisibleBy(target, 3) + SumDivisibleBy(target, 5) - SumDivisibleBy(target, 15)
+	// sdb: SumDivisibleBy
+	sdb := func(n int) int {
+		p := target / n
+		return n * (p * (p + 1)) / 2
+	}
+	return sdb(3) + sdb(5) - sdb(15)
 }
 
 func main() {
