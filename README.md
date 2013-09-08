@@ -1,4 +1,4 @@
 project-euler-solutions
 =======================
 
-Prroject Euler solutions written in Go
+Project Euler solutions written in Go
