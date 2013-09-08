@@ -4,6 +4,8 @@
 
 package main
 
+import "fmt"
+
 func p1(n int) int {
 	sum := 0
 	for i := 0; i < n; i++ {
@@ -15,5 +17,5 @@ func p1(n int) int {
 }
 
 func main() {
-	println(p1(1000))
+	fmt.Println(p1(1000))
 }

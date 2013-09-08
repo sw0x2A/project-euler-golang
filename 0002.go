@@ -9,6 +9,8 @@
 
 package main
 
+import "fmt"
+
 func p2(n int) int {
 	a, b, sum := 1, 2, 0
 	for b < n {
@@ -21,5 +23,5 @@ func p2(n int) int {
 }
 
 func main() {
-	println(p2(4000000))
+	fmt.Println(p2(4000000))
 }
