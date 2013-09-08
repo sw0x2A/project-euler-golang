@@ -6,9 +6,10 @@ package main
 
 import "fmt"
 
-func p1(n int) int {
+// Easy solution; not used
+func p1easy(n int) int {
 	sum := 0
-	for i := 0; i < n; i++ {
+	for i := 0; i <= n; i++ {
 		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
@@ -16,6 +17,15 @@ func p1(n int) int {
 	return sum
 }
 
+func SumDivisibleBy(target, n int) int {
+	p := target / n
+	return n * (p * (p + 1)) / 2
+}
+
+func p1fast(target int) int {
+	return SumDivisibleBy(target, 3) + SumDivisibleBy(target, 5) - SumDivisibleBy(target, 15)
+}
+
 func main() {
-	fmt.Println(p1(1000))
+	fmt.Println(p1fast(999))
 }
