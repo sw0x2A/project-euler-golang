@@ -12,12 +12,12 @@ package main
 import "fmt"
 
 func p2(n int) int {
-	a, b, sum := 1, 2, 0
-	for b < n {
-		if b%2 == 0 {
-			sum += b
-		}
-		a, b = b, a+b
+	sum, a, b, c := 0, 1, 1, 2 // c=a+b
+	for c < n {
+		sum += c
+		a = b + c
+		b = c + a
+		c = a + b
 	}
 	return sum
 }
