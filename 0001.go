@@ -4,8 +4,6 @@
 
 package main
 
-import "fmt"
-
 // Easy solution; not used
 func p1easy(n int) int {
 	sum := 0
@@ -24,8 +22,4 @@ func p1fast(target int) int {
 		return n * (p * (p + 1)) / 2
 	}
 	return sdb(3) + sdb(5) - sdb(15)
-}
-
-func main() {
-	fmt.Println(p1fast(999))
 }

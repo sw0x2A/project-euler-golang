@@ -4,8 +4,6 @@
 
 package main
 
-import "fmt"
-
 func reverse(n int) int {
 	r := 0
 	for n > 0 {
@@ -40,8 +38,4 @@ func p4() int {
 		a--
 	}
 	return lp
-}
-
-func main() {
-	fmt.Println(p4())
 }

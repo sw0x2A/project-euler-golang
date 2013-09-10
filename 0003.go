@@ -3,10 +3,7 @@
 
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "math"
 
 func p3(n int64) int {
 	var f, lf, mf int64
@@ -36,8 +33,4 @@ func p3(n int64) int {
 		return int(lf)
 	}
 	return int(n)
-}
-
-func main() {
-	fmt.Println(p3(600851475143))
 }
