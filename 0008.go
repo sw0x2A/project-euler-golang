@@ -1,3 +1,5 @@
+// https://projecteuler.net/problem=8
+
 package main
 
 import "strconv"
