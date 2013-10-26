@@ -4,8 +4,8 @@ package main
 
 func p34() int {
 	facts := make([]int, 10)
-	facts[0] = 1
-	for i := 1; i < 10; i++ {
+	facts[0], facts[1] = 1, 1
+	for i := 2; i < 10; i++ {
 		facts[i] = facts[i-1] * i
 	}
 	sum := 0
