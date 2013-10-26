@@ -5,7 +5,7 @@ import "testing"
 func TestP31(t *testing.T) {
 	in, out := 200, 73682
 	if x := p31(in); x != out {
-		t.Errorf("p31(in) = %d, should be %d", x, out)
+		t.Errorf("p31(%d) = %d, should be %d", in, x, out)
 	}
 }
 
