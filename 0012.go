@@ -2,6 +2,7 @@
 
 package main
 
+// Requires PrimesBelow from utils.go
 func p12() int {
 	n, dn, cnt := 3, 2, 0
 	primearray := PrimesBelow(1000000)
