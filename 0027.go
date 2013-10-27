@@ -6,7 +6,7 @@ var primes []int
 
 func p27() int {
 	primes = PrimesBelow(87400)
-	bPos := PrimesBelow(1000)
+	bPos := primes[0:168]
 	max, p := 0, 0
 	for a := -999; a < 1000; a += 2 {
 		for i := 1; i < len(bPos); i++ {
