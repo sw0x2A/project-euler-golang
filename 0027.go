@@ -2,10 +2,8 @@
 
 package main
 
-var primes []int
-
 func p27() int {
-	primes = PrimesBelow(87400)
+	primes := PrimesBelow(87400)
 	bPos := primes[0:168]
 	max, p := 0, 0
 	for a := -999; a < 1000; a += 2 {
@@ -20,7 +18,7 @@ func p27() int {
 				if i%2 == 0 {
 					aodd = -1
 				}
-				for isPrime(abs(n*n + (a+aodd)*n + sign*bPos[i])) {
+				for IsPrime(abs(n*n+(a+aodd)*n+sign*bPos[i]), primes) {
 					n++
 				}
 				if max < n {
@@ -31,21 +29,6 @@ func p27() int {
 		}
 	}
 	return p
-}
-
-func isPrime(n int) bool {
-	if n%2 == 0 && n != 2 {
-		return false
-	}
-	for _, p := range primes {
-		if p == n {
-			return true
-		}
-		if p > n {
-			break
-		}
-	}
-	return false
 }
 
 func abs(n int) int {

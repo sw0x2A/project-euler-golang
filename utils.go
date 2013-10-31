@@ -4,6 +4,7 @@ package main
 
 import (
 	"math"
+	"sort"
 )
 
 // Sieve of Eratosthenes
@@ -45,4 +46,15 @@ func PrimesBelow(limit int) []int {
 		last = i
 	}
 	return primes[0:last]
+}
+
+func IsPrime(n int, p []int) bool {
+	if n < 2 || n%2 == 0 && n != 2 {
+		return false
+	}
+	i := sort.Search(len(p), func(i int) bool { return p[i] >= n })
+	if !(i < len(p) && p[i] == n) {
+		return false
+	}
+	return true
 }
