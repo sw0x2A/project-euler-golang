@@ -4,13 +4,6 @@ package main
 
 import "math"
 
-func gcd(x, y int) int {
-	for y != 0 {
-		x, y = y, x%y
-	}
-	return x
-}
-
 func p9(s int) int {
 	s2 := s / 2
 	mlimit := int(math.Sqrt(float64(s2))) - 1
@@ -28,7 +21,7 @@ loop:
 				k = m + 1
 			}
 			for k < 2*m && k <= sm {
-				if sm%k == 0 && gcd(k, m) == 1 {
+				if sm%k == 0 && Gcd(k, m) == 1 {
 					d := s2 / (k * m)
 					n := k - m
 					a = d * (m*m - n*n)

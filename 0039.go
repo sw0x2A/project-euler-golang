@@ -17,7 +17,7 @@ func p39() int {
 					k = m + 2
 				}
 				for k < 2*m && k <= s/(2*m) {
-					if s/(2*m)%k == 0 && gcd(k, m) == 1 {
+					if s/(2*m)%k == 0 && Gcd(k, m) == 1 {
 						t++
 					}
 					k += 2
